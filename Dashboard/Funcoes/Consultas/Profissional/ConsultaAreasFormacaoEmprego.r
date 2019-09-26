@@ -8,6 +8,17 @@ ConsultaAreasFormacaoEmprego <- function(egressos, sigla_curso) {
   area_graduacao <- estudos %>%
     select(Nome, Area) %>%
     filter(estudos$Escola == "IFSP", estudos$Curso == sigla_curso)
+
+  if (identical(egressos, EgressosADS())) {
+    area_graduacao <- area_graduacao %>%
+      add_row(Nome = "FATIMA LOURENCO", Area = "INFORMACAO")
+  }
+  if (identical(egressos, EgressosGPI())) {
+    area_graduacao <- area_graduacao %>%
+      add_row(Nome = "ANDERSON NUNES DE OLIVEIRA JUNIOR", Area = "PROCESSOS INDUSTRIAIS") %>%
+      add_row(Nome = "ANDERSON PINHEIRO CESARIO", Area = "PROCESSOS INDUSTRIAIS") %>%
+      add_row(Nome = "PAULO ROBERTO POLLI", Area = "PROCESSOS INDUSTRIAIS")
+  }
   # ==============================================================================
   # CONSULTA - ÁREA DO ATUAL TRABALHO
   # ==============================================================================
