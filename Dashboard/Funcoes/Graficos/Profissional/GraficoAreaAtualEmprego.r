@@ -13,7 +13,7 @@ GraficoAreaAtualEmprego <- function(area_atual_empregodf) {
       AreaCargo = str_replace_all(AreaCargo, "ADMINISTRACAO", "ADM"),
       AreaCargo = str_replace_all(AreaCargo, "GESTAO DE EMPRESAS", "GEST. EMPRESAS"),
       AreaCargo = str_replace_all(AreaCargo, "GESTAO DE PESSOAS", "GEST. PESSOAS"),
-      AreaCargo = str_replace_all(AreaCargo, "MARKETING", "MKT"),
+      AreaCargo = str_replace_all(AreaCargo, "MARKETING", "MARKETING"),
       AreaCargo = str_replace_all(AreaCargo, "PROCESSOS INDUSTRIAIS", "PROC. IND."),
       AreaCargo = str_replace_all(AreaCargo, "RECURSOS NATURAIS", "R. NATURAIS")
     ) %>%
