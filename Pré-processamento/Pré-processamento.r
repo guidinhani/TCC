@@ -295,7 +295,7 @@ empregos <- read.csv(file = "Empregos.csv", header = TRUE) %>%
                             |.*TECNICO EM ADMINISTRACAO.*|.*ADMINISTRATIVO.*|^APRENDIZ$|.*APRENDIZ.*|.*LOGISTICA.*|ASSISTENTE DE SUPRIMENTOS|
                             |ASSISTENTE DE TRAFEGO|SUPERVISOR DE TRAFEGO|ASSISTENTE TECNICO|.*AUXILIAR DE ESCRITORIO.*|AUXILIAR DE POSVENDA|
                             |.*PRODUTOS E FORNECEDORES.*|.*GESTOR DE PROJETOS.*|.*LABORATORISTA DE ESCOLAS MUNICIPAIS.*|.*SERVIDOR PUBLICO.*|
-                            |AUXILIAR DE GERENCIAMENTO DE PROJETOS", "ADMINISTRACAO"),
+                            |AUXILIAR DE GERENCIAMENTO DE PROJETOS|^SUPORTE$|^ESTAGIARIO$", "ADMINISTRACAO"),
     # ARTES
     AreaCargo = str_replace_all(AreaCargo, ".*ARTES.*|.*FOTOGRAFIA.*|.*FOTOGRAFA.*|.*ARTE.*", "ARTES"),
     # COMUNICAÇÃO
@@ -324,13 +324,13 @@ empregos <- read.csv(file = "Empregos.csv", header = TRUE) %>%
                                 |.*CLIENTE.*|.*VISTORIADOR.*|REPRESENTANTE.*|.*GESTORA DE PESSOAS.*|.*FUNCIONARIA PUBLICA ESTADUAL.*|
                                 |.*FISCAL DE LOJA.*|.*GESTAO DE PESSOAS.*|ATENDENTE|AUXILIAR GERAL|BALCONISTA", "GESTAO DE PESSOAS"),
 
-    # GESTÃO DE EMPRESASS
+    # GESTÃO DE EMPRESAS
     AreaCargo = str_replace_all(AreaCargo, "SETOR DE EXPEDICAO E FATURAMENTO|ESTOQUISTA|.*LIDER.*|^GESTOR DE PROJETOS.*|DOCUMENTADOR|
                                 |.*ANALISTA DE PREVENCAO A FRAUDE.*|.*CUMPRIMENTO.*|^PROPRIETARIO$|.*EMPRESAS.*|^GERENTE$|
                                 |.*ADMINISTRACAO DE EMPRESAS.*|.*BUSINESS MANAGEMENT.*|.*NEGOCIOS.*|.*GESTAO EMPRESARIAL.*|
                                 |ASSISTENTE DE PROJETOS|^ASSISTENTE DE SUPORTE$|ASSISTENTE DE IMPLEMENTACAO|
                                 |CONSULTORA TECNICA|^CONFERENTE$|^CONSULTOR$|.*CONTROL.*|CONTROLADOR DE ARMAZEM|.*COORDENADOR.*|
-                                |.*GESTAO DE EMPRESAS.*|.*DIRETOR.*|.*EXPEDIDOR.*", "GESTAO DE EMPRESAS"),
+                                |.*GESTAO DE EMPRESAS.*|.*DIRETOR.*|.*EXPEDIDOR.*|MOTORISTA", "GESTAO DE EMPRESAS"),
     # INFORMAÇÃO
     AreaCargo = str_replace_all(AreaCargo, "ANALISTA.+REDE.*|ANALISTA DE PERFORMANCE|.*INTEGRACAO SOA.*|.*INFORMATICA.*|.*MOBILE DEVELOPER.*|
                                 |.*ANALISTA DE SISTEMAS.*|.*SUPPORT ANALYST.*|.*ANALISTA DE SUPORTE.*|.*ANALISTA DE TI.*|
@@ -378,7 +378,7 @@ empregos <- read.csv(file = "Empregos.csv", header = TRUE) %>%
     AreaCargo = str_replace_all(AreaCargo, ".*QUIMICO.*", "QUIMICA"),
 
     # OUTROS
-    AreaCargo = str_replace_all(AreaCargo, "BRASIL KIRIN|DESEMPREGADO|^ESTAGIARIO$|OFFICE BOY|^SUPORTE$|^TECNICO$|MOTORISTA", "OUTROS"),
+    AreaCargo = str_replace_all(AreaCargo, "BRASIL KIRIN|DESEMPREGADO|OFFICE BOY|^TECNICO$", "OUTROS"),
     # ==============================================================================
     # ÁREAS CARGOS ESPECÍFICOS (BASEADO NO CONHECIMENTO DO DESENVOLVEDOR)
     # ==============================================================================
